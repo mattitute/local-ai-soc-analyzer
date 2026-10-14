@@ -156,4 +156,4 @@ MITRE ATT\&CK: T1110 - Brute Force
 
 \## Dashboard
 
-![Local AI SOC Dashboard](screenshots/dashboard.png)
+![Local AI SOC Dashboard](screenshots/Dashboard.png)
