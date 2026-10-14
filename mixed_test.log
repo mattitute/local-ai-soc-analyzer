@@ -1,0 +1,13 @@
+Oct 14 12:31:07 ubuntu sshd[1234]: Failed password for root from 192.168.1.50 port 55231 ssh2
+Oct 14 12:31:45 ubuntu sshd[1235]: Failed password for root from 192.168.1.50 port 55232 ssh2
+Oct 14 12:32:11 ubuntu sshd[1236]: Failed password for root from 192.168.1.50 port 55233 ssh2
+Oct 14 12:32:59 ubuntu sshd[1237]: Failed password for root from 192.168.1.50 port 55234 ssh2
+Oct 14 12:33:20 ubuntu sshd[1238]: Failed password for root from 192.168.1.50 port 55235 ssh2
+
+2026-10-14 13:01 Failed password for admin from 192.168.1.80
+2026-10-14 13:02 Failed password for admin from 192.168.1.80
+2026-10-14 13:03 Failed password for admin from 192.168.1.80
+2026-10-14 13:04 Failed password for admin from 192.168.1.80
+2026-10-14 13:05 Failed password for admin from 192.168.1.80
+
+This line should be ignored.

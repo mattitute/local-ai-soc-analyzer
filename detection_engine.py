@@ -4,13 +4,12 @@ from collections import defaultdict, deque
 def detect_bruteforce(events, threshold=5, window_minutes=5):
     windows = defaultdict(deque)
     alerts = []
+    seen = set()
 
     events = sorted(
         events,
         key=lambda x: x["timestamp"]
     )
-
-    seen = set()
 
     for event in events:
         key = (
@@ -38,18 +37,27 @@ def detect_bruteforce(events, threshold=5, window_minutes=5):
 
         if attempt_count >= threshold and key not in seen:
 
-            severity = (
-                "Critical"
-                if attempt_count >= 10
-                else "High"
-            )
+            if attempt_count >= 10:
+                severity = "Critical"
+            else:
+                severity = "High"
 
             alerts.append({
+                "detection_type": "Possible Brute Force",
                 "source_ip": event["ip"],
                 "target_user": event["user"],
                 "failed_attempts": attempt_count,
                 "window_minutes": window_minutes,
-                "severity": severity
+                "detection_threshold": threshold,
+                "first_attempt": windows[key][0].isoformat(),
+                "last_attempt": windows[key][-1].isoformat(),
+                "severity": severity,
+                "mitre_technique": "T1110 - Brute Force",
+                "mitre_subtechnique": "T1110.001 - Password Guessing",
+                "log_source": event.get(
+                    "log_source",
+                    "unknown"
+                )
             })
 
             seen.add(key)

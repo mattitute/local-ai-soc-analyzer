@@ -1,0 +1,6 @@
+{
+  "threshold": 5,
+  "window_minutes": 5,
+  "ollama_model": "qwen3:8b",
+  "ollama_url": "http://localhost:11434/api/generate"
+}
