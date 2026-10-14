@@ -1,4 +1,4 @@
-\# Local AI SOC Analyzer
+# Local AI SOC Analyzer
 
 
 
@@ -8,33 +8,33 @@ rule-based detection with a locally hosted Large Language Model.
 
 
 
-\## Features
+## Features
 
 
 
-\- Parses authentication logs
+- Parses authentication logs
 
-\- Detects brute-force login attempts
+- Detects brute-force login attempts
 
-\- Uses sliding time-window detection
+- Uses sliding time-window detection
 
-\- Supports multiple IP addresses and users
+- Supports multiple IP addresses and users
 
-\- Assigns severity levels
+- Assigns severity levels
 
-\- Maps detections to MITRE ATT\&CK
+- Maps detections to MITRE ATT\&CK
 
-\- Uses local Qwen LLM through Ollama
+- Uses local Qwen LLM through Ollama
 
-\- Generates AI-assisted SOC investigation reports
+- Generates AI-assisted SOC investigation reports
 
-\- Exports structured JSON alerts
+- Exports structured JSON alerts
 
-\- Displays results in a Streamlit dashboard
+- Displays results in a Streamlit dashboard
 
 
 
-\## Architecture
+## Architecture
 
 
 
@@ -74,7 +74,7 @@ Streamlit Dashboard
 
 
 
-\## Detection Rule
+## Detection Rule
 
 
 
@@ -82,17 +82,17 @@ Brute force detection triggers when:
 
 
 
-\- 5 or more failed login attempts
+- 5 or more failed login attempts
 
-\- Same source IP
+- Same source IP
 
-\- Same target user
+- Same target user
 
-\- Within 5 minutes
+- Within 5 minutes
 
 
 
-\## MITRE ATT\&CK
+## MITRE ATT\&CK
 
 
 
@@ -100,27 +100,27 @@ T1110 - Brute Force
 
 
 
-\## Technology Stack
+## Technology Stack
 
 
 
-\- Python
+- Python
 
-\- Ollama
+- Ollama
 
-\- Qwen 8B
+- Qwen 8B
 
-\- Streamlit
+- Streamlit
 
-\- Pandas
+- Pandas
 
-\- JSON
+- JSON
 
-\- Regular Expressions
+- Regular Expressions
 
 
 
-\## Privacy
+## Privacy
 
 
 
@@ -130,7 +130,7 @@ Security logs do not need to be sent to external cloud AI services.
 
 
 
-\## Example
+## Example
 
 
 
@@ -154,6 +154,13 @@ MITRE ATT\&CK: T1110 - Brute Force
 
 
 
-\## Dashboard
+## Screenshots
 
-![Local AI SOC Dashboard](screenshots/Dashboard.png)
+### SOC Dashboard
+![SOC Dashboard](screenshots/Dashboard.png)
+
+### AI Analysis
+![AI Analysis](screenshots/Dashboard2.png)
+
+### PowerShell
+![PowerShell](screenshots/powershell.png)
