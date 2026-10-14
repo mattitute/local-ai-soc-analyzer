@@ -1,5 +1,6 @@
 __pycache__/
 soc_report.json
+logs/
 *.pyc
 .venv/
 venv/
