@@ -1,0 +1,26 @@
+[
+    {
+        "detection_type": "Possible Brute Force",
+        "source_ip": "192.168.1.50",
+        "target_user": "admin",
+        "failed_attempts": 5,
+        "window_minutes": 5,
+        "first_attempt": "2026-10-13T10:01:00",
+        "last_attempt": "2026-10-13T10:05:00",
+        "severity": "High",
+        "mitre_technique": "T1110 - Brute Force",
+        "ai_analysis": "1. Summary  \nA brute force attack attempt was detected with 5 failed login attempts targeting the user \"admin\" from the internal IP 192.168.1.50 over a 5-minute window. The detection threshold was met, and the event is flagged as high severity.  \n\n2. Confirmed Evidence  \n- Detection Type: Possible Brute Force  \n- Source IP: 192.168.1.50  \n- Target User: admin  \n- Failed Attempts: 5  \n- Time Window: 5 minutes  \n- First Attempt: 2026-10-13T10:01:00  \n- Last Attempt: 2026-10-13T10:05:00  \n- Detection Threshold: 5  \n- Severity: High  \n\n3. Possible Interpretation  \nThe sequence of failed attempts within a short time window aligns with brute force tactics. The internal IP address (192.168.1.50) suggests the attack may originate from a local network device or a misconfigured system, rather than an external source. Targeting the \"admin\" user indicates an attempt to gain elevated access.  \n\n4. Recommended Investigation Steps  \n- Verify the origin of the IP address (192.168.1.50) to determine if it is internal or external.  \n- Check if the \"admin\" account has been compromised or is configured with weak credentials.  \n- Review system logs for additional suspicious activity around the time window.  \n- Monitor for further attempts or anomalies from the same source.  \n- Consider implementing account lockout policies or multi-factor authentication for the target account."
+    },
+    {
+        "detection_type": "Possible Brute Force",
+        "source_ip": "192.168.1.80",
+        "target_user": "root",
+        "failed_attempts": 5,
+        "window_minutes": 5,
+        "first_attempt": "2026-10-13T11:01:00",
+        "last_attempt": "2026-10-13T11:05:00",
+        "severity": "High",
+        "mitre_technique": "T1110 - Brute Force",
+        "ai_analysis": "1. Summary  \nA brute force attack attempt targeting the root user was detected from a private IP address (192.168.1.80) over a 5-minute window, with 5 failed login attempts. The event meets the detection threshold and is classified as high severity.  \n\n2. Confirmed Evidence  \n- Detection Type: Possible Brute Force  \n- Source IP: 192.168.1.80  \n- Target User: root  \n- Failed Attempts: 5  \n- Time Window: 5 minutes  \n- First Attempt: 2026-10-13T11:01:00  \n- Last Attempt: 2026-10-13T11:05:00  \n- Detection Threshold: 5  \n- Severity: High  \n\n3. Possible Interpretation  \nThe private IP address (192.168.1.80) may indicate internal network activity, but it could also be a misconfigured or spoofed source. The targeting of the root user suggests an attempt to gain elevated privileges, though no compromise has been confirmed.  \n\n4. Recommended Investigation Steps  \n- Verify if the source IP (192.168.1.80) belongs to a trusted internal system or is a misconfigured external IP.  \n- Check system logs for additional context (e.g., successful logins, other failed attempts).  \n- Review authentication mechanisms (e.g., password complexity, multi-factor authentication) for the root account.  \n- Monitor for further attempts from the same IP or other suspicious activity.  \n- Assess whether the system is exposed to external networks and evaluate firewall rules."
+    }
+]

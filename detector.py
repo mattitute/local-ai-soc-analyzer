@@ -4,7 +4,7 @@ import requests
 from collections import defaultdict, deque
 from datetime import datetime
 
-LOG_FILE = "sample_security_log"
+LOG_FILE = "sample_security_log.log"
 REPORT_FILE = "soc_report.json"
 
 THRESHOLD = 5
